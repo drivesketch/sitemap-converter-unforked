@@ -4,31 +4,36 @@
     <meta charset="utf-8">
     <title>Sitemap Converter</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="script.js"></script>
-    <script type="text/javascript">
-
-
-    </script>
 </head>
 <body>
 
-<div id="wrap">
-
-  <h1>Sitemap Converter</h1>
-  <div id="wrap_left">
-    <textarea id="input" placeholder="1. Paste here the CSV exported from Integrity"></textarea>
-    <p style="text-align: center">
-      <button class="button1" type="button" id="convert">2. Convert</button>
-    </p>
+<header>
+  <div class="contentsWapper">
+    <h1>Sitemap Converter</h1>
+  </div> 
+</header>
+<main>
+  <div class="contentsWapper">
+    <div id="input">
+      <textarea id="area_input" placeholder="Paste here the CSV exported from Integrity Plus."></textarea>
+      <button area-label="Clear" id="button_clear"></button>
+      <button area-label="Conver" id="button_convert"></button>
+    </div>
+    <div id="output">
+      <textarea id="area_output"></textarea>
+      <button area-label="Copy" id="button_copy"></button>
+      <!-- <div id="message">Copied!</div> -->
+    </div>
   </div>
-  <div id="wrap_right">
-    <textarea id="output1" placeholder="3. Converted data will appear here"></textarea>
-    <p style="text-align: center">
-      <button class="button2" type="button" id="copyOutput1">4. Copy</button>
-    </p>
+</main>
+<footer>
+  <div class="contentsWapper">
+    <img class="footer_logo" src="aco_logo_white.svg" alt="A.C.O.">
+    <span class="footer_credit">Design Consulting Studio 東京</span>
   </div>
-</div>
-
+</footer>
 </body>
 </html>
