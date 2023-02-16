@@ -1,7 +1,6 @@
 // CSVを配列に格納する
 $(function(){
-    $('#button_convert').click(function(){
-      console.log('converted!');
+  $('#button_convert').click(function(){
     //改行ごとに配列化
     let rawText1 = $('#area_input').val()
         .replace(/"url","Title","Priority","Change frequency"\n/g,'')//タイトル行を消す
@@ -17,38 +16,46 @@ $(function(){
         res[i].push(res[i][0]); // urlを末尾に追加
         res[i][2] = res[i][2].replace(/([^\/])\/([^(\/|\n\$)])/g,'$1\/\t$2');  //url列をスラッシュで区切る
         convertedText += res[i][0]  +'\t' + res[i][1]  + '\t' + res[i][2] + '\n';  //タブ区切りテキスト化する
-        }
-       $('#area_output').val(convertedText);
-    });
+      }
+      $('#area_output').val(convertedText);
+      console.log('Converted!');
   });
+});
 
-    // メッセージを出す
-    function showMsg(){
-      msgBox = document.createElement('div');
-      // msgBox.attr('id','message');
-      msgBox.id = 'message';
-      msgBox.textContent = 'Copied!';
-      $('#output').append(msgBox);
-    }
-    // メッセージを消す
-    function msgFadeOut(){
-      // msgBox.style.cssText+='opacity: 0;
-      $('#message').fadeOut();
-    }
-    function removeMsg() {
-      $('#message').remove();
-    }
+// メッセージを出す
+function showMsg(){
+  msgBox = document.createElement('div');
+  // msgBox.attr('id','message');
+  msgBox.id = 'message';
+  msgBox.textContent = 'Copied!';
+  $('#output').append(msgBox);
+}
+// メッセージを消す
+function msgFadeOut(){
+  // msgBox.style.cssText+='opacity: 0;
+  $('#message').fadeOut();
+}
+function removeMsg() {
+  $('#message').remove();
+}
 
-    // コピーボタンを押すと、右のテキストエリアが全選択され、コピー。
-    // コピーされました のメッセージが出て、その後自動的に消える
-    $(function(){
-      $('#button_copy').click(function(){
-        // 全選択してコピー
-        $('#area_output').select();
-        document.execCommand('copy');
-        // メッセージが出て、消える
-        showMsg();
-        setTimeout('msgFadeOut()', 1000);
-        setTimeout('removeMsg()', 2000);
-      });
-    });
+// コピーボタンを押すと、右のテキストエリアが全選択され、コピー。
+// コピーされました のメッセージが出て、その後自動的に消える
+$(function(){
+  $('#button_copy').click(function(){
+    // 全選択してコピー
+    $('#area_output').select();
+    document.execCommand('copy');
+    // メッセージが出て、消える
+    showMsg();
+    setTimeout('msgFadeOut()', 1000);
+    setTimeout('removeMsg()', 2000);
+  });
+});
+
+// Clear #area_input
+$(function(){
+  $('#button_clear').click(function(){
+    $('#area_input').val('');
+  });
+});
