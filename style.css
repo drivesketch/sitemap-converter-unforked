@@ -13,7 +13,6 @@ body {
 
 button:hover {
   cursor: pointer;
-  opacity: 0.8;
 }
 
 header, main, footer {
@@ -66,7 +65,6 @@ main #input #area_input {
   background: #fff;
   color: #4D4D58;
   resize: none;
-  overflow: hidden;
 }
 main #input #area_input:focus {
   outline: 2px solid #EB503C;
@@ -94,6 +92,9 @@ main #input #button_clear::after {
   line-height: 1;
   color: #98989E;
 }
+main #input #button_clear:hover::after {
+  color: #E6A8A0;
+}
 main #input #button_convert {
   border: 0;
   border-radius: 40px;
@@ -110,9 +111,13 @@ main #input #button_convert::after {
   font-family: "Material Symbols Rounded";
   content: "\e5e1";
   font-size: 40px;
+  line-height: 80px;
   position: relative;
   left: 3px;
   color: #fff;
+}
+main #input #button_convert:hover {
+  box-shadow: 0px 0px 14px rgba(164, 58, 44, 0.74);
 }
 main #output {
   flex: 1;
@@ -128,11 +133,9 @@ main #output #area_output {
   border-radius: 8px;
   color: #72727A;
   resize: none;
-  overflow: hidden;
 }
 main #output #area_output:focus {
   outline: 2px solid #EB503C;
-  border: 0;
 }
 main #output #button_copy {
   border: 0;
@@ -140,16 +143,20 @@ main #output #button_copy {
   position: absolute;
   bottom: 16px;
   right: 24px;
-  height: 40px;
-  width: 40px;
-  border-radius: 20px;
+  height: 48px;
+  width: 48px;
+  border-radius: 8px;
+  text-align: center;
 }
 main #output #button_copy::after {
   font-family: "Material Symbols Rounded";
   content: "\e14d";
   font-size: 32px;
-  line-height: 1;
+  line-height: 48px;
   color: #EB503C;
+}
+main #output #button_copy:hover {
+  background-color: #E9E9EB;
 }
 main #output #message {
   padding: 12px 40px;

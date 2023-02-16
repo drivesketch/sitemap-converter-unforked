@@ -15,7 +15,6 @@ body {
 button {
     &:hover {
         cursor: pointer;
-        opacity: .8;
     }
 }
 header, main, footer {
@@ -63,7 +62,7 @@ main{
             background: #fff;
             color: #4D4D58;
             resize: none;
-            overflow: hidden;
+            // overflow: hidden;
             &:focus {
                 outline: 2px solid $aco_orange;
             }
@@ -87,6 +86,9 @@ main{
                 line-height: 1; 
                 color: #98989E;
             }
+            &:hover::after {
+                color: #E6A8A0;
+            }
         }
         #button_convert {
             border: 0;
@@ -103,11 +105,14 @@ main{
                 font-family: "Material Symbols Rounded";
                 content: "\e5e1";
                 font-size: 40px;
+                line-height: 80px;
                 position: relative;
                 left: 3px;
                 color: #fff;
             }
-        }
+            &:hover {
+                box-shadow: 0px 0px 14px rgba(164, 58, 44, 0.74);
+            }      }
     }
     #output{
         flex: 1;
@@ -122,10 +127,9 @@ main{
             border-radius: 8px;
             color: #72727A;
             resize: none;
-            overflow: hidden;
+            // overflow: hidden;
             &:focus {
                 outline: 2px solid $aco_orange;
-                border: 0;
             }}
         #button_copy {
             border: 0;
@@ -133,15 +137,19 @@ main{
             position: absolute;
             bottom: 16px;
             right: 24px;
-            height: 40px;
-            width: 40px;
-            border-radius: 20px;
+            height: 48px;
+            width: 48px;
+            border-radius: 8px;
+            text-align: center;
             &::after {
                 font-family: "Material Symbols Rounded";
                 content: "\e14d";
                 font-size: 32px;
-                line-height: 1; 
+                line-height: 48px; 
                 color: $aco_orange;
+            }
+            &:hover {
+                background-color: #E9E9EB;
             }
         }
         #message{
