@@ -125,6 +125,7 @@ main{
             overflow: hidden;
             &:focus {
                 outline: 2px solid $aco_orange;
+                border: 0;
             }}
         #button_copy {
             border: 0;

@@ -132,6 +132,7 @@ main #output #area_output {
 }
 main #output #area_output:focus {
   outline: 2px solid #EB503C;
+  border: 0;
 }
 main #output #button_copy {
   border: 0;
