@@ -47,7 +47,7 @@ main{
         display: flex;
         gap: 40px;
     }
-    .input {
+    #input {
         height: calc(100vh - 400px);
         box-shadow: 0 0 13px 0 rgba(117,117,117,.37);
         border-radius: 8px;
@@ -55,15 +55,15 @@ main{
         position: relative;
         #area_input {
             height: 100%;
-            width: calc(100% - 2px);
+            width: 100%;
             background: #FDFDFD;
             border: 0;
             border-radius: 8px;
             padding: 16px 24px;
             background: #fff;
-            // font-size: 16px;
             color: #4D4D58;
             resize: none;
+            overflow: hidden;
             &:focus {
                 outline: 2px solid $aco_orange;
             }
@@ -109,7 +109,7 @@ main{
             }
         }
     }
-    .output{
+    #output{
         flex: 1;
         position: relative;
         #area_output {
@@ -121,7 +121,11 @@ main{
             box-shadow: 0px 0px 13px rgba(117, 117, 117, 0.37);
             border-radius: 8px;
             color: #72727A;
-        }
+            resize: none;
+            overflow: hidden;
+            &:focus {
+                outline: 2px solid $aco_orange;
+            }}
         #button_copy {
             border: 0;
             background-color: rgba(244, 244, 244, .7);

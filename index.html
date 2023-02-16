@@ -13,19 +13,19 @@
 <header>
   <div class="contentsWapper">
     <h1>Sitemap Converter</h1>
-  </div>
+  </div> 
 </header>
 <main>
   <div class="contentsWapper">
-    <div class="input">
-      <textarea id="area_input" placeholder="変換するCSVをペーストしてください"></textarea>
-      <button id="button_clear"></button>
-      <button id="button_convert"></button>
+    <div id="input">
+      <textarea id="area_input" placeholder="Paste here the CSV exported from Integrity Plus."></textarea>
+      <button area-label="Clear" id="button_clear"></button>
+      <button area-label="Conver" id="button_convert"></button>
     </div>
-    <div class="output">
-      <div id="area_output">http://example.com</div>
-      <button id="button_copy"></button>
-      <div id="message">Copied!</div>
+    <div id="output">
+      <textarea id="area_output"></textarea>
+      <button area-label="Copy" id="button_copy"></button>
+      <!-- <div id="message">Copied!</div> -->
     </div>
   </div>
 </main>
