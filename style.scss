@@ -178,6 +178,9 @@ footer {
     .footer_logo {
         height: 24px;
     }
+    a:hover {
+        opacity: .6;
+    }
     .footer_credit {
         text-transform: uppercase;
         color: #FDFDFD;
