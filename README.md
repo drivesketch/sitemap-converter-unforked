@@ -1,6 +1,8 @@
 # Sitemap Converter
 
-Integrity Plusから出力したCSVファイルを、
+GitHub Pagesで動きます→(Sitemap Converter)[https://drivesketch.github.io/sitemap-converter/]
+
+(Integrity Plus)[https://apps.apple.com/jp/app/integrity-plus/id963582854]から出力したCSVファイルを、
 
 | URL                      | Title | 階層1                | 階層2 | 階層3 |
 | ------------------------ | ----- | -------------------- | ----- | ----- |
